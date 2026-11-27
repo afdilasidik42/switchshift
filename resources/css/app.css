@@ -1,0 +1,60 @@
+*{box-sizing:border-box}
+:root{color:#492e21;background:#fff8e7;font:16px/1.55 "Segoe UI",system-ui,sans-serif;accent-color:#975717}
+body{margin:0}
+a{color:#75420d;text-underline-offset:.18em}
+a:hover{color:#452a1e}
+button,input,select,textarea{font:inherit}
+button,.button{display:inline-block;min-height:42px;padding:.5rem .85rem;border:1px solid #bba279;border-radius:8px;background:#fff9ec;color:#492e21;cursor:pointer;text-decoration:none}
+button:hover,.button:hover{background:#f4e1b5}
+button.primary,.button.primary{background:#f6c351;border-color:#ad721e;font-weight:700}
+button.primary:hover,.button.primary:hover{background:#ffd477}
+button:disabled{opacity:.58;cursor:wait}
+:focus-visible{outline:3px solid #98550b;outline-offset:3px}
+.shell{min-height:100vh;display:grid;grid-template-columns:224px minmax(0,1fr)}
+.sidebar{padding:28px 16px;color:#fff8e7;background:#432b20;display:flex;flex-direction:column;gap:24px}
+.brand{font:700 2rem/1.1 Georgia,serif;color:#ffd16b;text-decoration:none;padding:0 .5rem;white-space:nowrap}
+.brand:hover{color:#ffe4a6}
+.brand span{display:block;font:500 .82rem/1.6 "Segoe UI",sans-serif;color:#f0ddbc;letter-spacing:.04em;margin-top:.35rem}
+.nav{display:grid;gap:7px}
+.nav a,.nav button{border:0;background:transparent;color:#fff8e7;text-decoration:none;text-align:left;padding:9px 12px;border-radius:7px;overflow-wrap:anywhere}
+.nav a:hover,.nav button:hover{background:#69483a;color:white}
+.nav a[aria-current=page]{background:#f6c351;color:#432b20;font-weight:700}
+.sidebar :focus-visible{outline-color:#ffd16b}
+.identity{margin-top:auto;padding:12px 8px;border-top:1px solid #795746}
+.identity span,small{display:block}
+.menu{display:none}
+.skip{position:absolute;left:12px;top:-100px;background:#fff8e7;padding:10px;z-index:1}
+.skip:focus{top:12px}
+main{width:100%;max-width:1440px;margin:0 auto;padding:clamp(16px,3.6vw,52px);min-width:0}
+.intro{margin-bottom:24px;border-bottom:1px solid #dcc6a0;padding-bottom:18px}
+h1,h2,h3,p{margin:0 0 .65rem}
+h1,h2{font-family:Georgia,serif;line-height:1.2}
+h1{font-size:clamp(1.75rem,4vw,2.75rem)}
+h2{font-size:1.45rem}
+.intro p,.empty,small,.muted{color:#745848}
+.card{min-width:0;border:1px solid #dcc6a0;border-radius:12px;padding:clamp(14px,2vw,24px);background:#fffcf4;margin-bottom:16px}
+.narrow{max-width:520px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:16px;align-items:start}
+.actions,.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.filters{align-items:end}
+label{display:grid;gap:4px;margin-bottom:10px;font-weight:600;min-width:0}
+input,select,textarea{width:100%;min-width:0;min-height:42px;padding:8px;border:1px solid #bba279;border-radius:6px;color:#492e21;background:#fffdf8}
+input[type=checkbox]{width:auto;min-height:auto}
+textarea{min-height:88px;resize:vertical}
+.alert{padding:12px 18px;margin:0 0 16px;border:1px solid #c58f53;border-radius:8px}
+.errors{padding-left:36px;background:#fff1e2;color:#7b2e19}
+.success{background:#edf5dd;border-color:#a7ba83;color:#344b21}
+.scroll{overflow:auto;border:1px solid #e3d2b4;border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;text-align:left}
+caption{text-align:left;padding:9px;background:#fbefcf;font-weight:700}
+td,th{padding:9px 12px;border-bottom:1px solid #e8d9bf;vertical-align:middle}
+thead{background:#f6e8c6}
+tbody tr:last-child>*{border-bottom:0}
+td select{min-width:104px}
+.tag{display:inline-block;background:#f6e8c6;border-radius:6px;padding:3px 8px;font-size:.9rem}
+.mine{background:#fff4d6}
+.warn{color:#8a3618;font-weight:600}
+.entries{display:grid;gap:12px;padding:0;list-style:none}
+.entries li{border-bottom:1px solid #e9d9bd;padding-bottom:10px}
+summary{cursor:pointer;font-weight:600;padding:6px 0}
+@media(max-width:720px){.shell{display:block}.sidebar{display:flex;flex-wrap:wrap;flex-direction:row;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px}.brand{font-size:1.55rem}.brand span{margin-top:1px}.menu{display:inline-block}.nav{display:none;width:100%;order:3}.nav.open{display:grid}.identity{display:none}main{padding:18px 14px}.intro{margin-bottom:16px}}

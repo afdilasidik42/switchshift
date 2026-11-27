@@ -1,0 +1,26 @@
+{
+  "name": "rotio-shift-management",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "all": "concurrently --kill-others --names server,vite,scheduler \"php artisan serve --host=127.0.0.1 --port=8000\" \"npm run dev -- --host 127.0.0.1\" \"php artisan schedule:work\"",
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@inertiajs/react": "^2.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.1",
+    "laravel-vite-plugin": "^2.0.0",
+    "typescript": "~5.9.0",
+    "vite": "^7.0.0"
+  }
+}
